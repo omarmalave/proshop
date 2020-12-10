@@ -16,5 +16,6 @@ module.exports = {
     'no-unused-vars': ['error', { argsIgnorePattern: 'next' }],
     'no-underscore-dangle': ['error', { allow: ['_id'] }],
     'no-use-before-define': ['error', 'nofunc'],
+    'import/extensions': [2, { js: 'ignorePackages' }],
   },
 };

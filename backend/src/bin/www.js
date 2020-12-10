@@ -1,15 +1,16 @@
-#!/usr/bin/env node
+#!/usr/bin/.env node
 
 /**
  * Module dependencies.
  */
 
 import debug from 'debug';
-import pino from 'pino';
 import http from 'http';
-import app from '../app';
+import dotenv from 'dotenv';
+import app from '../app.js';
+import log from '../config/log.js';
 
-const log = pino();
+dotenv.config();
 
 const $debug = debug('backend:server');
 /**
