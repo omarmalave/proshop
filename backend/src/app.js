@@ -3,8 +3,8 @@ import 'express-async-errors';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import dotenv from 'dotenv';
-import usersRouter from './routes/users.js';
-import productsRouter from './routes/productRouter.js';
+import usersRouter from './routes/userRouter.js';
+import productRouter from './routes/productRouter.js';
 import connectDb from './config/db.js';
 import errorHandler, { notFoundHandler } from './middlewares/errorHandler.js';
 
@@ -18,8 +18,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/users', usersRouter);
-app.use('/api/products', productsRouter);
+app.use('/api/users', usersRouter);
+app.use('/api/products', productRouter);
 
 app.use(notFoundHandler);
 
