@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { element } from 'prop-types';
+import PropTypes from 'prop-types';
 
 const FormContainer = ({ children }) => {
   return (
@@ -15,7 +15,8 @@ const FormContainer = ({ children }) => {
 };
 
 FormContainer.propTypes = {
-  children: element.isRequired,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.array])
+    .isRequired,
 };
 
 export default FormContainer;

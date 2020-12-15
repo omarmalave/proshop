@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node src/bin/www.js",
-    "dev": "eslint --fix src/** && NODE_ENV=dev npm run start",
+    "dev": "NODE_ENV=dev npm run start",
     "prod": "NODE_ENV=prod npm run start",
     "watch:dev": "nodemon"
   },
