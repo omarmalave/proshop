@@ -5,6 +5,7 @@ import logger from 'morgan';
 import dotenv from 'dotenv';
 import usersRouter from './routes/userRouter.js';
 import productRouter from './routes/productRouter.js';
+import orderRouter from './routes/orderRouter.js';
 import connectDb from './config/db.js';
 import errorHandler, { notFoundHandler } from './middlewares/errorHandler.js';
 
@@ -20,6 +21,7 @@ app.use(cookieParser());
 
 app.use('/api/users', usersRouter);
 app.use('/api/products', productRouter);
+app.use('/api/orders', orderRouter);
 
 app.use(notFoundHandler);
 
